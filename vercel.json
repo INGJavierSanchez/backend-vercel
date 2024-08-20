@@ -13,6 +13,13 @@
   ],
   
     "rewrites": [
-      { "source": "/(.*)", "destination": "/api" }
-    ]
+      { "source": "/(.*)", 
+      "destination": "/" 
+      }
+    ],
+    "functions": {
+      "api/clientes/**/*.js": {
+        "maxDuration": 90
+      }
+    }
   }
