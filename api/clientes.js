@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../db');
+const db = require('../database');
 
 // Create a new cliente
 router.post('/', (req, res) => {
@@ -23,7 +23,11 @@ router.get('/', (req, res) => {
     if (err) {
       return res.status(500).json({ error: err.message });
     }
-    res.json(rows);
+    if (rows.length === 0) {
+        return res.status(200).json({ message: 'No hay Clientes' });
+      }
+    res.status(200).json(rows);
+   
   });
 });
 
