@@ -17,6 +17,6 @@ app.get("/", (req, res) => {
   res.send(htmlResponse);
 });
 
-app.listen(port, () => {
-  console.log(`port runing in http://localhost:${port}`);
-});
+module.exports = (req, res) => {
+  app(req, res);
+};
