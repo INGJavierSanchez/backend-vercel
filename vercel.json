@@ -11,12 +11,7 @@
       "dest": "/"
     }
   ],
-  
-    "rewrites": [
-      { "source": "/(.*)", 
-      "destination": "/" 
-      }
-    ],
+
     "functions": {
       "api/clientes/**/*.js": {
         "maxDuration": 90
